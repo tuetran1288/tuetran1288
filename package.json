@@ -1,0 +1,16 @@
+{
+  "name": "haire-video-studio",
+  "version": "1.0.0",
+  "description": "HAI RÊ Video Studio: web nội bộ làm video ngắn 3 bước, nối Lark Base",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "setup-lark": "node scripts/setup-lark.js",
+    "test": "node scripts/selftest.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
