@@ -1,5 +1,17 @@
 # 🎓 Thầy AI — Hướng dẫn cài đặt lên VPS (từng bước)
 
+## ⚡ Cách nhanh nhất: một dòng lệnh
+
+Sau khi đã trỏ tên miền về IP của VPS, đăng nhập VPS (quyền root) và dán:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tuetran1288/tuetran1288/claude/thay-ai-pwa-app-qr57lr/thay-ai/install.sh | bash
+```
+
+Script tự cài Docker, tải code, hỏi bạn tên miền / PIN / 2 khóa API
+(nhập khóa sẽ không hiện chữ), rồi chạy app. Muốn cập nhật sau này: chạy lại đúng dòng đó.
+Các bước thủ công bên dưới chỉ dùng khi bạn muốn tự làm từng bước.
+
 App gia sư giọng nói tiếng Việt cho trẻ em, chạy trên VPS của bạn,
 mở bằng iPad và thêm vào màn hình chính như một app thật.
 
