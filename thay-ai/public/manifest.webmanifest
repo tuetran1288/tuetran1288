@@ -1,0 +1,17 @@
+{
+  "name": "Thầy AI",
+  "short_name": "Thầy AI",
+  "lang": "vi",
+  "description": "Gia sư giọng nói tiếng Việt cho trẻ em",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF8E7",
+  "theme_color": "#FFF8E7",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

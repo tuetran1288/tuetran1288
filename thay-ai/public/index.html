@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <title>Thầy AI</title>
+  <meta name="description" content="Gia sư giọng nói tiếng Việt cho trẻ em" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FFF8E7" />
+  <!-- Để thêm vào màn hình chính iPad như một app thật -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Thầy AI" />
+  <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+  <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ============ Màn hình nhập mã PIN ============ -->
+  <section id="screen-pin" class="screen" hidden>
+    <div class="pin-box">
+      <div class="pin-logo">🎓</div>
+      <h1>Thầy AI</h1>
+      <p class="pin-hint">Nhập mã PIN để vào lớp</p>
+      <div id="pin-dots" class="pin-dots">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="pin-pad">
+        <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button>
+        <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button>
+        <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button>
+        <button class="pad-empty" disabled></button><button data-k="0">0</button><button data-k="del">⌫</button>
+      </div>
+      <p id="pin-error" class="pin-error"></p>
+    </div>
+  </section>
+
+  <!-- ============ Màn hình chính: chọn thầy ============ -->
+  <section id="screen-home" class="screen" hidden>
+    <header class="home-header">
+      <h1>🎓 Thầy AI</h1>
+      <p>Hôm nay con muốn học gì?</p>
+    </header>
+    <div id="teacher-grid" class="teacher-grid"><!-- thẻ thầy hiện ở đây --></div>
+    <p id="home-note" class="home-note"></p>
+  </section>
+
+  <!-- ============ Màn hình trò chuyện ============ -->
+  <section id="screen-chat" class="screen" hidden>
+    <header class="chat-header">
+      <button id="btn-back" class="btn-back" title="Về trang chính">←</button>
+      <div class="chat-title">
+        <span id="chat-icon">🧑‍🏫</span>
+        <span id="chat-name">Thầy</span>
+      </div>
+      <button id="btn-end" class="btn-end">Tạm biệt 👋</button>
+    </header>
+
+    <div id="transcript" class="transcript"><!-- bong bóng hội thoại --></div>
+
+    <footer class="chat-footer">
+      <button id="btn-keyboard" class="btn-round small" title="Gõ chữ">⌨️</button>
+      <div class="mic-wrap">
+        <button id="btn-mic" class="btn-mic" aria-label="Nói chuyện">
+          <span id="mic-emoji">🎤</span>
+        </button>
+        <div id="mic-status" class="mic-status">Bấm để nói</div>
+      </div>
+      <button id="btn-mute" class="btn-round small" title="Tắt / mở tiếng">🔊</button>
+    </footer>
+
+    <div id="type-row" class="type-row" hidden>
+      <input id="type-input" type="text" placeholder="Gõ câu muốn nói..." autocomplete="off" />
+      <button id="type-send">Gửi</button>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

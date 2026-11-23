@@ -2,3 +2,6 @@ node_modules
 .env
 data/*
 !data/.gitkeep
+thay-ai/.env
+thay-ai/data/*
+!thay-ai/data/.gitkeep
